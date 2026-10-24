@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+</head>
+<body>
+
+    <script>
+        // 1. Take the price of three products using prompt() and convert to numbers
+        var price1 = Number(prompt("Enter the price of product 1:"));
+        var price2 = Number(prompt("Enter the price of product 2:"));
+        var price3 = Number(prompt("Enter the price of product 3:"));
+
+        // 2. Calculate the total bill
+        var totalBill = price1 + price2 + price3;
+        var finalAmount = totalBill; // Default to full price
+
+        // 3. If the bill is Rs. 5000 or more, apply a 10% discount
+        if (totalBill >= 5000) {
+            var discount = totalBill * 0.10; // 10% of total
+            finalAmount = totalBill - discount;
+            alert("You qualified for a 10% discount! Your discount is Rs. " + discount);
+        }
+
+        // 4. Display the final amount
+        alert("Original Total: Rs. " + totalBill + "\nFinal Amount to Pay: Rs. " + finalAmount);
+    </script>
+
+</body>
+</html>
